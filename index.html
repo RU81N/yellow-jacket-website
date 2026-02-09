@@ -6,44 +6,67 @@
 <title>Yellow Jacket Wasp Removal</title>
 
 <style>
+:root {
+  --yellow: #f4c430;
+  --yellow-light: #fff4cc;
+  --dark: #2b2b2b;
+  --grey: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fffbe6;
-  color: #333;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--dark);
+  background: #ffffff;
+  line-height: 1.6;
 }
 
 header {
-  background: #fdd835;
-  padding: 20px;
+  background: var(--yellow);
+  padding: 24px;
   text-align: center;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav {
+  margin-top: 16px;
+}
+
 nav button {
-  margin: 5px;
-  padding: 10px 15px;
+  background: white;
   border: none;
-  background: #fff;
-  font-weight: bold;
+  padding: 10px 16px;
+  margin: 4px;
+  border-radius: 6px;
+  font-weight: 600;
   cursor: pointer;
 }
 
 nav button:hover {
-  background: #ffecb3;
+  background: var(--yellow-light);
 }
 
 .banner {
-  background: #ffca28;
-  padding: 15px;
+  background: var(--dark);
+  color: white;
+  padding: 14px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 section {
   display: none;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
-  padding: 30px;
+  padding: 50px 20px;
 }
 
 section.active {
@@ -51,23 +74,48 @@ section.active {
 }
 
 h2 {
-  color: #f57f17;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--grey);
+  padding: 24px;
+  border-radius: 10px;
 }
 
 .grey-box {
-  background: #ccc;
-  height: 200px;
+  background: #dcdcdc;
+  height: 220px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px 0;
-  font-weight: bold;
+  font-weight: 600;
+  color: #666;
+}
+
+.button {
+  display: inline-block;
+  background: var(--yellow);
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-top: 16px;
 }
 
 footer {
-  background: #fdd835;
+  background: #111;
+  color: white;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
+  font-size: 0.9rem;
 }
 </style>
 </head>
@@ -85,63 +133,67 @@ footer {
     <button onclick="show('emergency')">Emergency</button>
     <button onclick="show('faq')">FAQ</button>
     <button onclick="show('reviews')">Reviews</button>
-    <button onclick="show('contact')">Contact</button>  </nav>
+    <button onclick="show('contact')">Contact</button>
+  </nav>
 </header>
 
 <div class="banner">
-  🚨 24/7 Emergency Wasp Removal – Call Now
+  🚨 24/7 Emergency Wasp Removal — Fast, Safe & Professional
 </div>
 
 <section id="home" class="active">
-  <h2>Welcome</h2>
-  <p>Safe, fast, and professional wasp removal services.</p>
+  <h2>Professional Wasp Removal You Can Trust</h2>
+  <p>We provide fast, safe, and effective wasp removal for homes and businesses. Fully insured, experienced, and available 24/7.</p>
+
   <div class="grey-box">Custom Vehicle Image Here</div>
+
+  <a class="button">Request a Free Quote</a>
 </section>
 
 <section id="about">
   <h2>About Us</h2>
-  <p>We are a trusted local wasp removal business with years of experience.</p>
+  <p>Yellow Jacket Wasp Removal is a local specialist company dedicated to safe and professional wasp control. Our trained technicians use proven methods to protect your property and family.</p>
 </section>
 
 <section id="services">
   <h2>Our Services</h2>
-  <ul>
-    <li>Residential Wasp Removal</li>
-    <li>Commercial Wasp Control</li>
-    <li>Nest Removal</li>
-    <li>Preventative Treatments</li>
-  </ul>
+  <div class="card-grid">
+    <div class="card">Residential Wasp Removal</div>
+    <div class="card">Commercial Wasp Control</div>
+    <div class="card">Nest Identification & Removal</div>
+    <div class="card">Preventative Treatments</div>
+  </div>
 </section>
 
 <section id="wasp">
-  <h2>Wasp Removal</h2>
-  <p>We specialize in safe and effective wasp nest removal.</p>
+  <h2>Wasp Removal Specialists</h2>
+  <p>From lofts to garden sheds, we safely remove wasp nests and help prevent them from returning.</p>
 </section>
 
 <section id="pricing">
-  <h2>Pricing</h2>
-  <p>Transparent pricing. Contact us for a free quote.</p>
+  <h2>Transparent Pricing</h2>
+  <p>Clear, honest pricing with no hidden fees. Contact us for a fast, free quote.</p>
 </section>
 
 <section id="emergency">
   <h2>Emergency Call-Out</h2>
-  <p>Available 24/7 for urgent wasp problems.</p>
+  <p>Stung? Nest discovered suddenly? Our emergency service is available 24 hours a day.</p>
 </section>
 
 <section id="faq">
-  <h2>FAQ</h2>
-  <p>Do you offer emergency service? Yes, 24/7.</p>
+  <h2>Frequently Asked Questions</h2>
+  <p><strong>Do you offer same-day service?</strong><br>Yes, subject to availability.</p>
 </section>
 
 <section id="reviews">
   <h2>Customer Reviews</h2>
-  <p>⭐⭐⭐⭐⭐ “Fast, professional, and friendly.”</p>
+  <p>⭐⭐⭐⭐⭐ “Professional, quick, and friendly service.”</p>
 </section>
 
 <section id="contact">
   <h2>Contact Us</h2>
-  <p>Phone: 000-000-0000</p>
-  <p>Email: info@example.com</p>
+  <p><strong>Phone:</strong> 000-000-0000</p>
+  <p><strong>Email:</strong> info@example.com</p>
 </section>
 
 <footer>

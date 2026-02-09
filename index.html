@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yellow Jacket Wasp Removal</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fffbe6;
+  color: #333;
+}
+
+header {
+  background: #fdd835;
+  padding: 20px;
+  text-align: center;
+}
+
+nav button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  background: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background: #ffecb3;
+}
+
+.banner {
+  background: #ffca28;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+section {
+  display: none;
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px;
+}
+
+section.active {
+  display: block;
+}
+
+h2 {
+  color: #f57f17;
+}
+
+.grey-box {
+  background: #ccc;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+footer {
+  background: #fdd835;
+  text-align: center;
+  padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Yellow Jacket Wasp Removal</h1>
+  <nav>
+    <button onclick="show('home')">Home</button>
+    <button onclick="show('about')">About</button>
+    <button onclick="show('services')">Services</button>
+    <button onclick="show('wasp')">Wasp Removal</button>
+    <button onclick="show('pricing')">Pricing</button>
+    <button onclick="show('emergency')">Emergency</button>
+    <button onclick="show('faq')">FAQ</button>
+    <button onclick="show('reviews')">Reviews</button>
+    <button onclick="show('contact')">Contact</button>  </nav>
+</header>
+
+<div class="banner">
+  🚨 24/7 Emergency Wasp Removal – Call Now
+</div>
+
+<section id="home" class="active">
+  <h2>Welcome</h2>
+  <p>Safe, fast, and professional wasp removal services.</p>
+  <div class="grey-box">Custom Vehicle Image Here</div>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>We are a trusted local wasp removal business with years of experience.</p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <ul>
+    <li>Residential Wasp Removal</li>
+    <li>Commercial Wasp Control</li>
+    <li>Nest Removal</li>
+    <li>Preventative Treatments</li>
+  </ul>
+</section>
+
+<section id="wasp">
+  <h2>Wasp Removal</h2>
+  <p>We specialize in safe and effective wasp nest removal.</p>
+</section>
+
+<section id="pricing">
+  <h2>Pricing</h2>
+  <p>Transparent pricing. Contact us for a free quote.</p>
+</section>
+
+<section id="emergency">
+  <h2>Emergency Call-Out</h2>
+  <p>Available 24/7 for urgent wasp problems.</p>
+</section>
+
+<section id="faq">
+  <h2>FAQ</h2>
+  <p>Do you offer emergency service? Yes, 24/7.</p>
+</section>
+
+<section id="reviews">
+  <h2>Customer Reviews</h2>
+  <p>⭐⭐⭐⭐⭐ “Fast, professional, and friendly.”</p>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Phone: 000-000-0000</p>
+  <p>Email: info@example.com</p>
+</section>
+
+<footer>
+  © 2026 Yellow Jacket Wasp Removal
+</footer>
+
+<script>
+function show(id) {
+  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>

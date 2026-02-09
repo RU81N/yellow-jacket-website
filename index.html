@@ -49,19 +49,20 @@ nav {
   margin-top: 10px;
 }
 
-nav button {
+nav a {
+  display: inline-block;
   background: white;
-  border: none;
   padding: 10px 16px;
   margin: 4px;
   border-radius: 6px;
   font-weight: 500;
-  cursor: pointer;
+  text-decoration: none;
+  color: var(--dark);
   box-shadow: 0 2px 4px var(--shadow);
   transition: var(--transition);
 }
 
-nav button:hover {
+nav a:hover {
   background: var(--yellow-light);
   transform: translateY(-2px);
 }
@@ -83,7 +84,7 @@ section {
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-section.active {
+section.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -117,16 +118,11 @@ p { margin-bottom: 15px; }
   box-shadow: 0 6px 12px var(--shadow);
 }
 
-.grey-box {
-  background: #dcdcdc;
-  height: 220px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  color: #666;
-  margin: 20px 0;
+.svg-placeholder {
+  display: block;
+  margin: 20px auto;
+  width: 100px;
+  height: 100px;
 }
 
 .button {
@@ -147,17 +143,6 @@ p { margin-bottom: 15px; }
   transform: translateY(-2px);
 }
 
-/* SVG placeholders */
-.svg-placeholder {
-  width: 100%;
-  max-width: 250px;
-  margin: auto;
-  display: block;
-  height: 150px;
-  background: #ccc;
-  border-radius: 12px;
-}
-
 footer {
   background: #111;
   color: white;
@@ -168,10 +153,9 @@ footer {
 
 ul { padding-left: 20px; }
 
-/* Mobile adjustments */
 @media (max-width: 768px) {
   header h1 { font-size: 1.6rem; }
-  nav button { padding: 8px 12px; font-size: 0.9rem; }
+  nav a { padding: 8px 12px; font-size: 0.9rem; }
   section { padding: 40px 15px; }
 }
 </style>
@@ -181,15 +165,15 @@ ul { padding-left: 20px; }
 <header>
   <h1>Yellow Jacket Wasp Removal</h1>
   <nav>
-    <button onclick="show('home')">Home</button>
-    <button onclick="show('about')">About</button>
-    <button onclick="show('services')">Services</button>
-    <button onclick="show('wasp')">Wasp Removal</button>
-    <button onclick="show('pricing')">Pricing</button>
-    <button onclick="show('emergency')">Emergency</button>
-    <button onclick="show('faq')">FAQ</button>
-    <button onclick="show('reviews')">Reviews</button>
-    <button onclick="show('contact')">Contact</button>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#wasp">Wasp Removal</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#emergency">Emergency</a>
+    <a href="#faq">FAQ</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
@@ -197,24 +181,22 @@ ul { padding-left: 20px; }
   🚨 24/7 Emergency Wasp & Pest Removal — Fast, Safe & Professional
 </div>
 
-<section id="home" class="active">
+<section id="home" class="visible">
   <h2>Professional Wasp & Pest Removal in Hertfordshire & Bedfordshire</h2>
   <p>Fast, safe, and effective pest control for homes and businesses. Fully insured, UK-trained technicians, with clear advice and guaranteed results.</p>
-  <div class="grey-box">Custom Vehicle Image Here</div>
-
+  <svg class="svg-placeholder" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ccc"/><text x="32" y="37" text-anchor="middle" fill="#666" font-size="10">Vehicle</text></svg>
   <div class="card-grid">
     <div class="card"><strong>✔ Fully Insured</strong><p>All work carried out safely and professionally.</p></div>
     <div class="card"><strong>✔ Same-Day Service</strong><p>Fast response when you need it most.</p></div>
     <div class="card"><strong>✔ Family & Pet Safe</strong><p>Approved treatments with safety in mind.</p></div>
   </div>
-
   <a class="button">Request a Free Quote</a>
 </section>
 
 <section id="about">
   <h2>About Us</h2>
   <p>Yellow Jacket Wasp Removal is a trusted UK specialist company. Our trained technicians follow all UK regulations and use environmentally-conscious methods.</p>
-  <div class="svg-placeholder">Team Image Placeholder</div>
+  <svg class="svg-placeholder" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ccc"/><text x="32" y="37" text-anchor="middle" fill="#666" font-size="10">Team</text></svg>
 </section>
 
 <section id="services">
@@ -231,12 +213,12 @@ ul { padding-left: 20px; }
 
 <section id="wasp">
   <h2>Wasp & Pest Removal</h2>
-  <p>We safely remove wasp nests, hornets, and other pests from your property. DIY removal is dangerous — our professionals use approved techniques to protect your family and pets.</p>
-  <div class="svg-placeholder">Wasp/Ant Image Placeholder</div>
+  <p>We safely remove wasp nests, hornets, and other pests. DIY removal is dangerous — our professionals use approved techniques to protect your family and pets.</p>
+  <svg class="svg-placeholder" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ccc"/><text x="32" y="37" text-anchor="middle" fill="#666" font-size="10">Wasp/Ant</text></svg>
   <h3>Step-by-Step Process</h3>
   <ul>
     <li><strong>1. Inspection:</strong> Identify nests and risks.</li>
-    <li><strong>2. Treatment:</strong> Safe removal using industry-approved methods.</li>
+    <li><strong>2. Treatment:</strong> Safe removal using approved methods.</li>
     <li><strong>3. Prevention:</strong> Advice to stop pests returning.</li>
   </ul>
 </section>
@@ -275,7 +257,7 @@ ul { padding-left: 20px; }
   <p><strong>Phone:</strong> 000-000-0000</p>
   <p><strong>Email:</strong> info@example.com</p>
   <p><strong>Address:</strong> Serving Hertfordshire & Bedfordshire</p>
-  <div class="svg-placeholder">Map Placeholder</div>
+  <svg class="svg-placeholder" viewBox="0 0 64 64"><rect x="0" y="0" width="64" height="64" fill="#ccc"/><text x="32" y="37" text-anchor="middle" fill="#666" font-size="10">Map</text></svg>
 </section>
 
 <section id="area">
@@ -295,16 +277,19 @@ ul { padding-left: 20px; }
 </footer>
 
 <script>
-function show(id) {
-  const sections = document.querySelectorAll('section');
-  sections.forEach(s => s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-}
+// Fade in sections on scroll
+const sections = document.querySelectorAll("section");
+const options = { threshold: 0.1 };
+const observer = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+      obs.unobserve(entry.target);
+    }
+  });
+}, options);
 
-// Fade in sections on load
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('section').forEach(s => s.style.opacity = 1);
-});
+sections.forEach(section => observer.observe(section));
 </script>
 
 </body>

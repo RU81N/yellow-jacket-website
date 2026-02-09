@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yellow Jacket Wasp Removal</title>
 
-<!-- Google Fonts for nicer typography -->
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 
 <style>
@@ -15,9 +15,10 @@
   --dark: #2b2b2b;
   --grey: #f5f5f5;
   --shadow: rgba(0,0,0,0.15);
+  --transition: all 0.3s ease;
 }
 
-* { box-sizing: border-box; transition: all 0.3s ease; }
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -25,33 +26,39 @@ body {
   color: var(--dark);
   background: #fff;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 header {
   background: var(--yellow);
-  padding: 30px 20px;
+  padding: 20px;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 6px var(--shadow);
 }
 
 header h1 {
   margin: 0;
   font-family: 'Roboto Slab', serif;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 nav {
-  margin-top: 16px;
+  margin-top: 10px;
 }
 
 nav button {
   background: white;
   border: none;
-  padding: 12px 18px;
-  margin: 6px;
-  border-radius: 8px;
+  padding: 10px 16px;
+  margin: 4px;
+  border-radius: 6px;
   font-weight: 500;
   cursor: pointer;
   box-shadow: 0 2px 4px var(--shadow);
+  transition: var(--transition);
 }
 
 nav button:hover {
@@ -68,17 +75,17 @@ nav button:hover {
 }
 
 section {
-  display: none;
   max-width: 1200px;
   margin: auto;
   padding: 60px 20px;
   opacity: 0;
-  transition: opacity 0.8s ease;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 section.active {
-  display: block;
   opacity: 1;
+  transform: translateY(0);
 }
 
 h2 {
@@ -102,6 +109,7 @@ p { margin-bottom: 15px; }
   border-radius: 12px;
   box-shadow: 0 4px 8px var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
 }
 
 .card:hover {
@@ -139,6 +147,17 @@ p { margin-bottom: 15px; }
   transform: translateY(-2px);
 }
 
+/* SVG placeholders */
+.svg-placeholder {
+  width: 100%;
+  max-width: 250px;
+  margin: auto;
+  display: block;
+  height: 150px;
+  background: #ccc;
+  border-radius: 12px;
+}
+
 footer {
   background: #111;
   color: white;
@@ -149,12 +168,11 @@ footer {
 
 ul { padding-left: 20px; }
 
-img.placeholder {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-  background: #ccc;
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  header h1 { font-size: 1.6rem; }
+  nav button { padding: 8px 12px; font-size: 0.9rem; }
+  section { padding: 40px 15px; }
 }
 </style>
 </head>
@@ -181,8 +199,7 @@ img.placeholder {
 
 <section id="home" class="active">
   <h2>Professional Wasp & Pest Removal in Hertfordshire & Bedfordshire</h2>
-  <p>We provide fast, safe, and effective pest control services for homes and businesses. Fully insured, UK-trained technicians, with clear advice and guaranteed results.</p>
-
+  <p>Fast, safe, and effective pest control for homes and businesses. Fully insured, UK-trained technicians, with clear advice and guaranteed results.</p>
   <div class="grey-box">Custom Vehicle Image Here</div>
 
   <div class="card-grid">
@@ -196,8 +213,8 @@ img.placeholder {
 
 <section id="about">
   <h2>About Us</h2>
-  <p>Yellow Jacket Wasp Removal is a trusted UK specialist company dedicated to safe and professional pest control. Our trained technicians follow all UK regulations and use environmentally-conscious methods.</p>
-  <div class="grey-box">Image Placeholder (Team)</div>
+  <p>Yellow Jacket Wasp Removal is a trusted UK specialist company. Our trained technicians follow all UK regulations and use environmentally-conscious methods.</p>
+  <div class="svg-placeholder">Team Image Placeholder</div>
 </section>
 
 <section id="services">
@@ -215,7 +232,7 @@ img.placeholder {
 <section id="wasp">
   <h2>Wasp & Pest Removal</h2>
   <p>We safely remove wasp nests, hornets, and other pests from your property. DIY removal is dangerous — our professionals use approved techniques to protect your family and pets.</p>
-  <div class="grey-box">Image Placeholder (Wasp/Ant)</div>
+  <div class="svg-placeholder">Wasp/Ant Image Placeholder</div>
   <h3>Step-by-Step Process</h3>
   <ul>
     <li><strong>1. Inspection:</strong> Identify nests and risks.</li>
@@ -226,21 +243,21 @@ img.placeholder {
 
 <section id="pricing">
   <h2>Pricing</h2>
-  <p>We provide transparent, upfront pricing with no hidden fees. Typical residential nest removal starts at £75. Contact us for a free quote for your property.</p>
+  <p>Transparent, upfront pricing with no hidden fees. Residential nest removal starts at £75. Contact us for a free quote.</p>
 </section>
 
 <section id="emergency">
   <h2>Emergency Call-Out</h2>
-  <p>Found a nest suddenly? Our emergency service is available 24/7 across Hertfordshire & Bedfordshire. Quick response, safe removal, and prevention advice included.</p>
+  <p>24/7 service across Hertfordshire & Bedfordshire. Quick response, safe removal, and prevention advice included.</p>
 </section>
 
 <section id="faq">
   <h2>Frequently Asked Questions</h2>
   <ul>
-    <li><strong>Are wasps dangerous?</strong> They can sting, so professional removal is safer.</li>
-    <li><strong>How quickly can you attend?</strong> Typically same-day or next-day, depending on availability.</li>
+    <li><strong>Are wasps dangerous?</strong> They can sting; professional removal is safer.</li>
+    <li><strong>How quickly can you attend?</strong> Same-day or next-day service available.</li>
     <li><strong>Will the wasps return?</strong> We provide advice and preventative treatments.</li>
-    <li><strong>Is it safe for children & pets?</strong> Yes, all treatments are family and pet friendly.</li>
+    <li><strong>Is it safe for children & pets?</strong> Yes, treatments are family and pet friendly.</li>
   </ul>
 </section>
 
@@ -258,7 +275,7 @@ img.placeholder {
   <p><strong>Phone:</strong> 000-000-0000</p>
   <p><strong>Email:</strong> info@example.com</p>
   <p><strong>Address:</strong> Serving Hertfordshire & Bedfordshire</p>
-  <div class="grey-box">Map / Location Placeholder</div>
+  <div class="svg-placeholder">Map Placeholder</div>
 </section>
 
 <section id="area">
@@ -279,9 +296,15 @@ img.placeholder {
 
 <script>
 function show(id) {
-  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+  const sections = document.querySelectorAll('section');
+  sections.forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
 }
+
+// Fade in sections on load
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('section').forEach(s => s.style.opacity = 1);
+});
 </script>
 
 </body>
